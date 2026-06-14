@@ -526,11 +526,25 @@
     }
     .cert-card:hover { transform:translateY(-7px); box-shadow:var(--glass-shadow-hover); }
     .cert-card:hover::before { transform:scaleX(1); }
-    .cert-badge {
-      width:60px; height:60px; border-radius:50%; margin:0 auto 16px;
-      display:flex; align-items:center; justify-content:center; font-size:1.8rem;
-      background:rgba(255,255,255,0.7); box-shadow:0 4px 14px rgba(120,80,200,0.12);
+    .cert-link {
+      display:inline-flex; align-items:center; gap:5px; margin-top:14px;
+      font-size:0.74rem; font-weight:700; color:var(--accent);
+      background:rgba(124,58,237,0.09); border:1px solid rgba(124,58,237,0.22);
+      padding:5px 13px; border-radius:20px; transition:var(--transition);
     }
+    .cert-link:hover { background:var(--accent); color:#fff; }
+    .cert-link i { font-size:0.65rem; }
+    .cert-badge {
+      width:58px; height:58px; border-radius:16px; margin:0 auto 18px;
+      display:flex; align-items:center; justify-content:center; font-size:1.5rem;
+      box-shadow:0 4px 14px rgba(120,80,200,0.15);
+    }
+    .cert-badge.google   { background:#fff; padding:10px; }
+    .cert-badge.meta     { background:linear-gradient(135deg,#0866ff,#00c6ff); color:#fff; }
+    .cert-badge.mckinsey { background:transparent; padding:0; overflow:hidden; }
+    .cert-badge.aws      { background:linear-gradient(135deg,#ff9900,#ff6600); color:#fff; }
+    .cert-badge img      { width:100%; height:100%; object-fit:cover; border-radius:16px; }
+    .cert-badge.google img { object-fit:contain; }
     .cert-name     { font-size:0.92rem; font-weight:700; color:var(--text); margin-bottom:5px; }
     .cert-issuer   { font-size:0.78rem; color:var(--accent); font-weight:600; margin-bottom:3px; }
     .cert-platform { font-size:0.73rem; color:var(--muted); }
@@ -825,7 +839,7 @@
       <div class="exp-header">
         <div class="exp-company-block">
           <div class="exp-logo">
-            <img src="assets/images/logo_iu.png" alt="Indiana University" />
+            <img src="assets/images/IU.jpeg" alt="Indiana University" />
           </div>
           <div>
             <div class="exp-role">Business Data Analyst</div>
@@ -852,7 +866,7 @@
       <div class="exp-header">
         <div class="exp-company-block">
           <div class="exp-logo">
-            <img src="assets/images/logo_iu.png" alt="Indiana University" />
+            <img src="assets/images/IU.jpeg" alt="Indiana University" />
           </div>
           <div>
             <div class="exp-role">Data Analyst</div>
@@ -879,7 +893,7 @@
       <div class="exp-header">
         <div class="exp-company-block">
           <div class="exp-logo">
-            <img src="assets/images/logo_forage.png" alt="Forage / Deloitte" />
+            <img src="assets/images/forage.png" alt="Forage / Deloitte" />
           </div>
           <div>
             <div class="exp-role">Data Analytics Intern</div>
@@ -906,7 +920,7 @@
       <div class="exp-header">
         <div class="exp-company-block">
           <div class="exp-logo">
-            <img src="assets/images/logo_forage.png" alt="Forage / Deloitte" />
+            <img src="assets/images/forage.png" alt="Forage / Deloitte" />
           </div>
           <div>
             <div class="exp-role">Data Visualization Intern</div>
@@ -933,7 +947,7 @@
       <div class="exp-header">
         <div class="exp-company-block">
           <div class="exp-logo">
-            <img src="assets/images/logo_iu.png" alt="Indiana University" />
+            <img src="assets/images/IU.jpeg" alt="Indiana University" />
           </div>
           <div>
             <div class="exp-role">Data Analyst</div>
@@ -955,35 +969,8 @@
       </div>
     </div>
 
-    <!-- Instagram -->
-    <div class="exp-card reveal reveal-delay-1">
-      <div class="exp-header">
-        <div class="exp-company-block">
-          <div class="exp-logo">
-            <img src="assets/images/logo_instagram.png" alt="Instagram" />
-          </div>
-          <div>
-            <div class="exp-role">Digital Analyst</div>
-            <div class="exp-company">Instagram</div>
-          </div>
-        </div>
-        <div class="exp-meta">
-          <div class="exp-period">Mar 2020 – Jul 2022</div>
-          <div class="exp-location">📍 Remote, India</div>
-        </div>
-      </div>
-      <ul class="exp-bullets">
-        <li>Analyzed engagement and campaign performance metrics driving <strong>1M+ views</strong> and <strong>4x audience growth</strong> through data-driven content strategy optimization.</li>
-        <li>Developed self-service Power BI dashboards tracking <strong>10+ KPIs</strong>, reducing manual reporting effort by <strong>50%</strong>.</li>
-        <li>Performed customer segmentation &amp; behavioral analysis, increasing engagement rates by <strong>40%</strong>.</li>
-      </ul>
-      <div class="exp-tags">
-        <span class="exp-tag">Power BI</span><span class="exp-tag">Audience Analytics</span><span class="exp-tag">Segmentation</span><span class="exp-tag">CTR Analysis</span>
-      </div>
-    </div>
-
     <!-- TEDx -->
-    <div class="exp-card reveal reveal-delay-2">
+    <div class="exp-card reveal reveal-delay-1">
       <div class="exp-header">
         <div class="exp-company-block">
           <div class="exp-logo" style="background:#000;">
@@ -1006,6 +993,33 @@
       </ul>
       <div class="exp-tags">
         <span class="exp-tag">A/B Testing</span><span class="exp-tag">Tableau</span><span class="exp-tag">Campaign Analytics</span><span class="exp-tag">Conversion Funnel</span>
+      </div>
+    </div>
+
+    <!-- Instagram -->
+    <div class="exp-card reveal reveal-delay-2">
+      <div class="exp-header">
+        <div class="exp-company-block">
+          <div class="exp-logo">
+            <img src="assets/images/instagram.jpeg" alt="Instagram" />
+          </div>
+          <div>
+            <div class="exp-role">Digital Analyst</div>
+            <div class="exp-company">Instagram</div>
+          </div>
+        </div>
+        <div class="exp-meta">
+          <div class="exp-period">Mar 2020 – Jul 2022</div>
+          <div class="exp-location">📍 Remote, India</div>
+        </div>
+      </div>
+      <ul class="exp-bullets">
+        <li>Analyzed engagement and campaign performance metrics driving <strong>1M+ views</strong> and <strong>4x audience growth</strong> through data-driven content strategy optimization.</li>
+        <li>Developed self-service Power BI dashboards tracking <strong>10+ KPIs</strong>, reducing manual reporting effort by <strong>50%</strong>.</li>
+        <li>Performed customer segmentation &amp; behavioral analysis, increasing engagement rates by <strong>40%</strong>.</li>
+      </ul>
+      <div class="exp-tags">
+        <span class="exp-tag">Power BI</span><span class="exp-tag">Audience Analytics</span><span class="exp-tag">Segmentation</span><span class="exp-tag">CTR Analysis</span>
       </div>
     </div>
 
@@ -1251,30 +1265,48 @@
   <h2 class="section-title reveal"><span class="gradient-text">Certifications</span></h2>
   <p class="section-subtitle reveal">Industry-recognized credentials from leading technology organizations.</p>
   <div class="cert-grid">
+
     <div class="cert-card reveal">
-      <div class="cert-badge">🔵</div>
+      <div class="cert-badge google"><img src="https://www.gstatic.com/images/branding/googleg/1x/googleg_standard_color_128dp.png" alt="Google" /></div>
       <div class="cert-name">Google Data Analytics</div>
       <div class="cert-issuer">Google</div>
       <div class="cert-platform">via Coursera</div>
+      <a href="https://www.coursera.org/account/accomplishments/professional-cert/EOOAXA5DXD31"
+         target="_blank" class="cert-link">View Certificate <i class="fas fa-external-link-alt"></i></a>
     </div>
+
     <div class="cert-card reveal reveal-delay-1">
-      <div class="cert-badge">📘</div>
+      <div class="cert-badge meta"><i class="fab fa-meta"></i></div>
       <div class="cert-name">Introduction to Data Analytics</div>
       <div class="cert-issuer">Meta</div>
       <div class="cert-platform">via Coursera</div>
+      <a href="https://www.coursera.org/account/accomplishments/verify/W1JUQUY1RUVV"
+         target="_blank" class="cert-link">View Certificate <i class="fas fa-external-link-alt"></i></a>
     </div>
+
     <div class="cert-card reveal reveal-delay-2">
-      <div class="cert-badge">🟢</div>
+      <div class="cert-badge mckinsey"><img src="assets/images/logo_mckinsey.png" alt="McKinsey" /></div>
+      <div class="cert-name">McKinsey Forward Program</div>
+      <div class="cert-issuer">McKinsey &amp; Company</div>
+      <div class="cert-platform">via McKinsey.org</div>
+      <a href="https://www.credly.com/badges/1b9445d3-fbba-4c9a-a9dc-b895e64bce2e/public_url"
+         target="_blank" class="cert-link">View Badge <i class="fas fa-external-link-alt"></i></a>
+    </div>
+
+    <div class="cert-card reveal reveal-delay-3">
+      <div class="cert-badge google"><img src="https://www.gstatic.com/images/branding/googleg/1x/googleg_standard_color_128dp.png" alt="Google" /></div>
       <div class="cert-name">Foundations of Business Intelligence</div>
       <div class="cert-issuer">Google</div>
       <div class="cert-platform">via Coursera</div>
     </div>
-    <div class="cert-card reveal reveal-delay-3">
-      <div class="cert-badge">🟠</div>
+
+    <div class="cert-card reveal reveal-delay-1">
+      <div class="cert-badge aws"><i class="fab fa-aws"></i></div>
       <div class="cert-name">AWS Certified Data Analytics</div>
       <div class="cert-issuer">Amazon Web Services</div>
       <div class="cert-platform">via Coursera</div>
     </div>
+
   </div>
 </section>
 
