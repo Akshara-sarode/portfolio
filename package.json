@@ -1,0 +1,12 @@
+{
+  "name": "akshara-portfolio",
+  "version": "1.0.0",
+  "description": "Akshara Avinash Sarode — Personal Portfolio with AI Chatbot",
+  "scripts": {
+    "dev": "netlify dev",
+    "start": "netlify dev"
+  },
+  "devDependencies": {
+    "netlify-cli": "^17.0.0"
+  }
+}
