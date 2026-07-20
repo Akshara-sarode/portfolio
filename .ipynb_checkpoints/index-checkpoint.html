@@ -155,12 +155,6 @@
     }
     .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 22px rgba(124,58,237,0.45) !important; }
     .nav-cta::after { display: none !important; }
-    .nav-toggle {
-      display:none; width:40px; height:40px; align-items:center; justify-content:center;
-      border:0; border-radius:50%; background:rgba(124,58,237,0.10); color:var(--accent);
-      font-size:1.05rem; cursor:pointer; transition:var(--transition);
-    }
-    .nav-toggle:hover { background:var(--accent); color:#fff; }
 
     /* ────────────────────────────────────────────
        SECTIONS
@@ -460,8 +454,6 @@
     .project-card:hover { transform:translateY(-9px); box-shadow:var(--glass-shadow-hover); }
     .project-img { height:195px; overflow:hidden; position:relative; }
     .project-img img { width:100%; height:100%; object-fit:cover; transition:transform .6s ease; }
-    .project-img.project-img-contain { background:rgba(255,255,255,0.72); }
-    .project-img.project-img-contain img { object-fit:contain; }
     .project-card:hover .project-img img { transform:scale(1.08); }
     .project-img-emoji {
       width:100%; height:100%;
@@ -534,50 +526,14 @@
     }
     .cert-card:hover { transform:translateY(-7px); box-shadow:var(--glass-shadow-hover); }
     .cert-card:hover::before { transform:scaleX(1); }
-    .cert-link {
-      display:inline-flex; align-items:center; gap:5px; margin-top:14px;
-      font-size:0.74rem; font-weight:700; color:var(--accent);
-      background:rgba(124,58,237,0.09); border:1px solid rgba(124,58,237,0.22);
-      padding:5px 13px; border-radius:20px; transition:var(--transition);
-    }
-    .cert-link:hover { background:var(--accent); color:#fff; }
-    .cert-link i { font-size:0.65rem; }
     .cert-badge {
-      width:58px; height:58px; border-radius:16px; margin:0 auto 18px;
-      display:flex; align-items:center; justify-content:center; font-size:1.5rem;
-      box-shadow:0 4px 14px rgba(120,80,200,0.15);
+      width:60px; height:60px; border-radius:50%; margin:0 auto 16px;
+      display:flex; align-items:center; justify-content:center; font-size:1.8rem;
+      background:rgba(255,255,255,0.7); box-shadow:0 4px 14px rgba(120,80,200,0.12);
     }
-    .cert-badge.google   { background:#fff; padding:10px; }
-    .cert-badge.meta     { background:linear-gradient(135deg,#0866ff,#00c6ff); color:#fff; }
-    .cert-badge.mckinsey { background:transparent; padding:0; overflow:hidden; }
-    .cert-badge.aws      { background:linear-gradient(135deg,#ff9900,#ff6600); color:#fff; }
-    .cert-badge img      { width:100%; height:100%; object-fit:cover; border-radius:16px; }
-    .cert-badge.google img { object-fit:contain; }
     .cert-name     { font-size:0.92rem; font-weight:700; color:var(--text); margin-bottom:5px; }
     .cert-issuer   { font-size:0.78rem; color:var(--accent); font-weight:600; margin-bottom:3px; }
     .cert-platform { font-size:0.73rem; color:var(--muted); }
-
-    /* ────────────────────────────────────────────
-       RESEARCH PUBLICATIONS
-    ──────────────────────────────────────────── */
-    #publications { background:transparent; }
-    .publications-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:22px; }
-    .publication-card {
-      padding:26px; border-radius:var(--radius); position:relative; overflow:hidden;
-      background:var(--glass); backdrop-filter:blur(var(--blur));
-      -webkit-backdrop-filter:blur(var(--blur)); border:1px solid var(--glass-border);
-      box-shadow:var(--glass-shadow); transition:var(--transition);
-    }
-    .publication-card::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(90deg,var(--accent2),var(--accent),var(--pink)); }
-    .publication-card:hover { transform:translateY(-7px); box-shadow:var(--glass-shadow-hover); }
-    .publication-icon { width:46px; height:46px; display:flex; align-items:center; justify-content:center; border-radius:13px; margin-bottom:16px; background:rgba(14,165,233,0.12); color:var(--accent2); font-size:1.2rem; }
-    .publication-title { color:var(--text); font-size:1rem; font-weight:700; line-height:1.4; margin-bottom:8px; }
-    .publication-journal { color:var(--accent); font-size:0.78rem; font-weight:600; line-height:1.55; margin-bottom:15px; }
-    .publication-list { list-style:none; display:grid; gap:8px; }
-    .publication-list li { position:relative; padding-left:15px; color:var(--muted); font-size:0.8rem; line-height:1.6; }
-    .publication-list li::before { content:'▸'; position:absolute; left:0; color:var(--accent); }
-    .publication-link { display:inline-flex; align-items:center; gap:6px; margin-top:18px; color:var(--accent); font-size:0.77rem; font-weight:700; }
-    .publication-link:hover { color:var(--pink); }
 
     /* ────────────────────────────────────────────
        CONNECT
@@ -656,23 +612,9 @@
       .about-grid { grid-template-columns:1fr; }
       section { padding:80px 5%; }
     }
-    @media(max-width:1024px) {
-      nav { width:min(680px,92vw); padding:0 18px; }
-      .nav-toggle { display:inline-flex; }
-      .nav-links {
-        display:none; position:absolute; top:calc(100% + 10px); left:0; right:0;
-        flex-direction:column; align-items:stretch; gap:3px; padding:10px;
-        border-radius:22px; background:rgba(255,255,255,0.82);
-        backdrop-filter:blur(24px) saturate(2); -webkit-backdrop-filter:blur(24px) saturate(2);
-        border:1px solid rgba(255,255,255,0.88); box-shadow:0 10px 30px rgba(120,80,200,0.16);
-      }
-      nav.menu-open .nav-links { display:flex; }
-      .nav-links a { display:block; padding:10px 14px; border-radius:12px; }
-      .nav-links a:hover { background:rgba(124,58,237,0.09); }
-      .nav-links a::after { display:none; }
-      .nav-cta { text-align:center; margin-top:3px; }
-    }
     @media(max-width:600px) {
+      .nav-links { gap:14px; }
+      .nav-cta { display:none; }
       .hero-stats { grid-template-columns:1fr 1fr; }
       .projects-grid { grid-template-columns:1fr; }
     }
@@ -789,8 +731,7 @@
 <!-- ═══════════════ NAV ═══════════════ -->
 <nav id="navbar">
   <div class="nav-logo">AAS.</div>
-  <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-navigation"><i class="fas fa-bars"></i></button>
-  <ul class="nav-links" id="primary-navigation">
+  <ul class="nav-links">
     <li><a href="#experience">Experience</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#projects">Projects</a></li>
@@ -817,7 +758,7 @@
     </div>
     <div class="hero-stats">
       <div class="stat-box"><span class="stat-num">2+</span><span class="stat-label">Years Exp.</span></div>
-      <div class="stat-box"><span class="stat-num">20+</span><span class="stat-label">Projects</span></div>
+      <div class="stat-box"><span class="stat-num">15+</span><span class="stat-label">Projects</span></div>
       <div class="stat-box"><span class="stat-num">5</span><span class="stat-label">Certs</span></div>
     </div>
   </div>
@@ -879,39 +820,12 @@
 
   <div class="timeline">
 
-    <!-- Springer Capital Data Engineer -->
-    <div class="exp-card reveal">
-      <div class="exp-header">
-        <div class="exp-company-block">
-          <div class="exp-logo">
-            <img src="assets/images/logo_springer_capital.svg" alt="Springer Capital" />
-          </div>
-          <div>
-            <div class="exp-role">Data Engineer</div>
-            <div class="exp-company">Springer Capital</div>
-          </div>
-        </div>
-        <div class="exp-meta">
-          <div class="exp-period">Jun – Present</div>
-          <div class="exp-location">📍 Chicago, USA</div>
-        </div>
-      </div>
-      <ul class="exp-bullets">
-        <li>Developed a containerized <strong>ETL pipeline</strong> using <strong>Apache Airflow, Docker, PostgreSQL, Python, and Pandas</strong> to automate CSV ingestion, validation, transformation, and database loading through a <strong>4-stage DAG</strong>.</li>
-        <li>Engineered <strong>schema-based validation</strong> using YAML configuration, SQL DDL, and Python, ensuring <strong>100% schema compliance</strong> and automated failure handling for malformed datasets before database ingestion.</li>
-        <li>Configured a reproducible <strong>Docker Compose</strong> environment with Airflow and PostgreSQL, implementing idempotent reload logic that maintained <strong>0 duplicate records</strong> while successfully loading <strong>5 validated records</strong> into PostgreSQL.</li>
-      </ul>
-      <div class="exp-tags">
-        <span class="exp-tag">Apache Airflow</span><span class="exp-tag">Docker</span><span class="exp-tag">PostgreSQL</span><span class="exp-tag">Python</span><span class="exp-tag">Pandas</span><span class="exp-tag">ETL</span>
-      </div>
-    </div>
-
     <!-- IU Business Data Analyst -->
     <div class="exp-card reveal">
       <div class="exp-header">
         <div class="exp-company-block">
           <div class="exp-logo">
-            <img src="assets/images/IU.jpeg" alt="Indiana University" />
+            <img src="assets/images/logo_iu.png" alt="Indiana University" />
           </div>
           <div>
             <div class="exp-role">Business Data Analyst</div>
@@ -938,7 +852,7 @@
       <div class="exp-header">
         <div class="exp-company-block">
           <div class="exp-logo">
-            <img src="assets/images/IU.jpeg" alt="Indiana University" />
+            <img src="assets/images/logo_iu.png" alt="Indiana University" />
           </div>
           <div>
             <div class="exp-role">Data Analyst</div>
@@ -960,39 +874,12 @@
       </div>
     </div>
 
-    <!-- Deloitte Visualization Intern -->
-    <div class="exp-card reveal reveal-delay-1">
-      <div class="exp-header">
-        <div class="exp-company-block">
-          <div class="exp-logo">
-            <img src="assets/images/forage.png" alt="Forage / Deloitte" />
-          </div>
-          <div>
-            <div class="exp-role">Data Visualization Intern</div>
-            <div class="exp-company">Deloitte (Forage)</div>
-          </div>
-        </div>
-        <div class="exp-meta">
-          <div class="exp-period">May 2025 – Jun 2025</div>
-          <div class="exp-location">📍 Remote, USA</div>
-        </div>
-      </div>
-      <ul class="exp-bullets">
-        <li>Processed <strong>52,000+ retail transaction records</strong> across <strong>38 countries</strong>, identifying pricing anomalies and uncovering seasonal revenue trends.</li>
-        <li>Designed executive Tableau dashboards with time-series, geospatial, and KPI scorecards, identifying a <strong>40% revenue surge</strong>.</li>
-        <li>Answered <strong>8 business-critical stakeholder questions</strong> through data storytelling, demonstrating top customers contributed less than <strong>17% above peer averages</strong>.</li>
-      </ul>
-      <div class="exp-tags">
-        <span class="exp-tag">Tableau</span><span class="exp-tag">Data Storytelling</span><span class="exp-tag">Geospatial</span><span class="exp-tag">Revenue Analytics</span>
-      </div>
-    </div>
-
     <!-- Deloitte Analytics Intern -->
     <div class="exp-card reveal reveal-delay-2">
       <div class="exp-header">
         <div class="exp-company-block">
           <div class="exp-logo">
-            <img src="assets/images/forage.png" alt="Forage / Deloitte" />
+            <img src="assets/images/logo_forage.png" alt="Forage / Deloitte" />
           </div>
           <div>
             <div class="exp-role">Data Analytics Intern</div>
@@ -1014,12 +901,39 @@
       </div>
     </div>
 
+    <!-- Deloitte Visualization Intern -->
+    <div class="exp-card reveal reveal-delay-1">
+      <div class="exp-header">
+        <div class="exp-company-block">
+          <div class="exp-logo">
+            <img src="assets/images/logo_forage.png" alt="Forage / Deloitte" />
+          </div>
+          <div>
+            <div class="exp-role">Data Visualization Intern</div>
+            <div class="exp-company">Deloitte (Forage)</div>
+          </div>
+        </div>
+        <div class="exp-meta">
+          <div class="exp-period">May 2025 – Jun 2025</div>
+          <div class="exp-location">📍 Remote, USA</div>
+        </div>
+      </div>
+      <ul class="exp-bullets">
+        <li>Processed <strong>52,000+ retail transaction records</strong> across <strong>38 countries</strong>, identifying pricing anomalies and uncovering seasonal revenue trends.</li>
+        <li>Designed executive Tableau dashboards with time-series, geospatial, and KPI scorecards, identifying a <strong>40% revenue surge</strong>.</li>
+        <li>Answered <strong>8 business-critical stakeholder questions</strong> through data storytelling, demonstrating top customers contributed less than <strong>17% above peer averages</strong>.</li>
+      </ul>
+      <div class="exp-tags">
+        <span class="exp-tag">Tableau</span><span class="exp-tag">Data Storytelling</span><span class="exp-tag">Geospatial</span><span class="exp-tag">Revenue Analytics</span>
+      </div>
+    </div>
+
     <!-- IU Dining -->
     <div class="exp-card reveal">
       <div class="exp-header">
         <div class="exp-company-block">
           <div class="exp-logo">
-            <img src="assets/images/IU.jpeg" alt="Indiana University" />
+            <img src="assets/images/logo_iu.png" alt="Indiana University" />
           </div>
           <div>
             <div class="exp-role">Data Analyst</div>
@@ -1041,62 +955,35 @@
       </div>
     </div>
 
-    <!-- CodSoft Data Science Intern -->
-    <div class="exp-card reveal reveal-delay-2">
+    <!-- Instagram -->
+    <div class="exp-card reveal reveal-delay-1">
       <div class="exp-header">
         <div class="exp-company-block">
           <div class="exp-logo">
-            <img src="assets/images/logo_codsoft.svg" alt="CodSoft" />
+            <img src="assets/images/logo_instagram.png" alt="Instagram" />
           </div>
           <div>
-            <div class="exp-role">Data Science Intern</div>
-            <div class="exp-company">CodSoft</div>
+            <div class="exp-role">Digital Analyst</div>
+            <div class="exp-company">Instagram</div>
           </div>
         </div>
         <div class="exp-meta">
-          <div class="exp-period">Jul 2023 – Aug 2023</div>
-          <div class="exp-location">📍 India, Remote</div>
+          <div class="exp-period">Mar 2020 – Jul 2022</div>
+          <div class="exp-location">📍 Remote, India</div>
         </div>
       </div>
       <ul class="exp-bullets">
-        <li>Developed <strong>three end-to-end machine learning projects</strong>—Titanic Survival Prediction, Sales Prediction, and Iris Classification—using <strong>Python, Pandas, NumPy, Scikit-learn, and Matplotlib</strong>, performing data cleaning, EDA, feature preprocessing, model training, and evaluation across <strong>3 real-world datasets</strong>.</li>
-        <li>Built and optimized <strong>Logistic Regression and Support Vector Classifier (SVC)</strong> models for the Iris dataset, achieving <strong>97.3% classification accuracy</strong> while evaluating precision, recall, F1-score, and accuracy to improve prediction reliability.</li>
-        <li>Designed a regression model for sales forecasting by analyzing relationships between <strong>TV, Radio, and Newspaper</strong> advertising and revenue, achieving an <strong>R² score of 90.6%</strong> with a <strong>Mean Squared Error of 2.91</strong> to enable data-driven marketing insights.</li>
+        <li>Analyzed engagement and campaign performance metrics driving <strong>1M+ views</strong> and <strong>4x audience growth</strong> through data-driven content strategy optimization.</li>
+        <li>Developed self-service Power BI dashboards tracking <strong>10+ KPIs</strong>, reducing manual reporting effort by <strong>50%</strong>.</li>
+        <li>Performed customer segmentation &amp; behavioral analysis, increasing engagement rates by <strong>40%</strong>.</li>
       </ul>
       <div class="exp-tags">
-        <span class="exp-tag">Python</span><span class="exp-tag">Scikit-learn</span><span class="exp-tag">Pandas</span><span class="exp-tag">NumPy</span><span class="exp-tag">Machine Learning</span><span class="exp-tag">Matplotlib</span>
-      </div>
-    </div>
-
-    <!-- YBI Foundation Machine Learning Intern -->
-    <div class="exp-card reveal">
-      <div class="exp-header">
-        <div class="exp-company-block">
-          <div class="exp-logo" style="background:#000;">
-            <img src="assets/images/logo_ybi_foundation.svg" alt="YBI Foundation" />
-          </div>
-          <div>
-            <div class="exp-role">Machine Learning Intern</div>
-            <div class="exp-company">YBI Foundation</div>
-          </div>
-        </div>
-        <div class="exp-meta">
-          <div class="exp-period">Mar 2023 – Apr 2023</div>
-          <div class="exp-location">📍 India, Remote</div>
-        </div>
-      </div>
-      <ul class="exp-bullets">
-        <li>Developed and evaluated <strong>5+ machine learning models</strong> using <strong>Python, Pandas, NumPy, and Scikit-learn</strong>, performing data preprocessing, feature engineering, and EDA to solve classification and regression problems with up to <strong>97.3% model accuracy</strong>.</li>
-        <li>Built end-to-end predictive analytics projects in <strong>Jupyter Notebook and Google Colab</strong>, implementing data cleaning, model training, hyperparameter tuning, and performance evaluation using Accuracy, Precision, Recall, F1-Score, R² Score, and Mean Squared Error.</li>
-        <li>Completed mentor-guided capstone projects and weekly technical reviews, presenting data-driven insights through <strong>20+ visualizations</strong> using <strong>Matplotlib and Seaborn</strong> while collaborating with industry mentors to refine model performance.</li>
-      </ul>
-      <div class="exp-tags">
-        <span class="exp-tag">Python</span><span class="exp-tag">Scikit-learn</span><span class="exp-tag">Pandas</span><span class="exp-tag">Jupyter</span><span class="exp-tag">Google Colab</span><span class="exp-tag">Seaborn</span>
+        <span class="exp-tag">Power BI</span><span class="exp-tag">Audience Analytics</span><span class="exp-tag">Segmentation</span><span class="exp-tag">CTR Analysis</span>
       </div>
     </div>
 
     <!-- TEDx -->
-    <div class="exp-card reveal reveal-delay-1">
+    <div class="exp-card reveal reveal-delay-2">
       <div class="exp-header">
         <div class="exp-company-block">
           <div class="exp-logo" style="background:#000;">
@@ -1119,87 +1006,6 @@
       </ul>
       <div class="exp-tags">
         <span class="exp-tag">A/B Testing</span><span class="exp-tag">Tableau</span><span class="exp-tag">Campaign Analytics</span><span class="exp-tag">Conversion Funnel</span>
-      </div>
-    </div>
-
-    <!-- CSI SIESGT Social Media Analyst -->
-    <div class="exp-card reveal reveal-delay-2">
-      <div class="exp-header">
-        <div class="exp-company-block">
-          <div class="exp-logo" style="background:#000;">
-            <img src="assets/images/logo_csi_siesgt.svg" alt="CSI SIESGT" />
-          </div>
-          <div>
-            <div class="exp-role">Social Media Analyst</div>
-            <div class="exp-company">CSI SIESGT</div>
-          </div>
-        </div>
-        <div class="exp-meta">
-          <div class="exp-period">May 2022 – Aug 2023</div>
-          <div class="exp-location">📍 India, Navi Mumbai</div>
-        </div>
-      </div>
-      <ul class="exp-bullets">
-        <li>Managed social media for the <strong>Computer Society of India (CSI) Student Chapter</strong> at SIES Graduate School of Technology, creating and publishing <strong>400+ Instagram stories and promotional posts</strong> for <strong>10 technical events</strong>, including <strong>3 national-level events</strong>, driving a <strong>40% increase in followers</strong>.</li>
-        <li>Executed real-time digital engagement strategies by coordinating <strong>3 live event streams</strong> and live social media coverage for events attended by <strong>1,000+ students</strong>, maximizing online participation and brand visibility.</li>
-        <li>Tracked campaign performance using <strong>Instagram Insights and Meta Business Suite</strong>, analyzing reach, impressions, and engagement to optimize content strategy and increase organic engagement across student audiences.</li>
-      </ul>
-      <div class="exp-tags">
-        <span class="exp-tag">Instagram Insights</span><span class="exp-tag">Meta Business Suite</span><span class="exp-tag">Social Media Analytics</span><span class="exp-tag">Content Strategy</span><span class="exp-tag">Live Events</span>
-      </div>
-    </div>
-
-    <!-- Exposys Data Labs Data Science Intern -->
-    <div class="exp-card reveal">
-      <div class="exp-header">
-        <div class="exp-company-block">
-          <div class="exp-logo" style="background:#000;">
-            <img src="assets/images/logo_exposys_data_labs.svg" alt="Exposys Data Labs" />
-          </div>
-          <div>
-            <div class="exp-role">Data Science Intern</div>
-            <div class="exp-company">Exposys Data Labs</div>
-          </div>
-        </div>
-        <div class="exp-meta">
-          <div class="exp-period">May 2022 – Jul 2022</div>
-          <div class="exp-location">📍 India, Remote</div>
-        </div>
-      </div>
-      <ul class="exp-bullets">
-        <li>Developed <strong>3+ end-to-end data science projects</strong> using <strong>Python, Pandas, NumPy, Scikit-learn, and Jupyter Notebook</strong>, performing data cleaning, EDA, feature engineering, and predictive modeling to solve real-world business problems.</li>
-        <li>Built and evaluated machine learning models for classification and regression, achieving up to <strong>97.3% classification accuracy</strong> and a <strong>90.6% R² score</strong> through data preprocessing, model tuning, and evaluation with Accuracy, Precision, Recall, F1-Score, MSE, and R² metrics.</li>
-        <li>Delivered documentation, presentations, and demo videos for <strong>3 capstone projects</strong>, translating findings into actionable insights through <strong>20+ data visualizations</strong> and improving model interpretability for technical and non-technical stakeholders.</li>
-      </ul>
-      <div class="exp-tags">
-        <span class="exp-tag">Python</span><span class="exp-tag">Scikit-learn</span><span class="exp-tag">Pandas</span><span class="exp-tag">NumPy</span><span class="exp-tag">Jupyter</span><span class="exp-tag">Predictive Modeling</span>
-      </div>
-    </div>
-
-    <!-- Instagram -->
-    <div class="exp-card reveal reveal-delay-2">
-      <div class="exp-header">
-        <div class="exp-company-block">
-          <div class="exp-logo">
-            <img src="assets/images/instagram.jpeg" alt="Instagram" />
-          </div>
-          <div>
-            <div class="exp-role">Digital Analyst</div>
-            <div class="exp-company">Instagram</div>
-          </div>
-        </div>
-        <div class="exp-meta">
-          <div class="exp-period">Mar 2020 – Jul 2022</div>
-          <div class="exp-location">📍 Remote, India</div>
-        </div>
-      </div>
-      <ul class="exp-bullets">
-        <li>Analyzed engagement and campaign performance metrics driving <strong>1M+ views</strong> and <strong>4x audience growth</strong> through data-driven content strategy optimization.</li>
-        <li>Developed self-service Power BI dashboards tracking <strong>10+ KPIs</strong>, reducing manual reporting effort by <strong>50%</strong>.</li>
-        <li>Performed customer segmentation &amp; behavioral analysis, increasing engagement rates by <strong>40%</strong>.</li>
-      </ul>
-      <div class="exp-tags">
-        <span class="exp-tag">Power BI</span><span class="exp-tag">Audience Analytics</span><span class="exp-tag">Segmentation</span><span class="exp-tag">CTR Analysis</span>
       </div>
     </div>
 
@@ -1273,26 +1079,6 @@
   <h2 class="section-title reveal">Featured <span class="gradient-text">Projects</span></h2>
   <p class="section-subtitle reveal">End-to-end solutions spanning AI, data engineering, and business intelligence.</p>
   <div class="projects-grid">
-
-    <div class="project-card reveal">
-      <div class="project-img project-img-contain"><img src="assets/images/project_youtube_learning.svg" alt="YouTube learning recommendation system" loading="lazy" /><div class="project-overlay"></div><div class="project-category">AI · NLP · Graph Theory</div></div>
-      <div class="project-body"><div class="project-title">YouTube API Learning Recommendation System</div><div class="project-desc">AI-powered pipeline that retrieves, analyzes, ranks, and recommends 100+ educational videos per topic using sentiment, TF-IDF, and graph-based prerequisite relationships.</div><div class="project-tech"><span class="tech-tag">YouTube API</span><span class="tech-tag">NLTK</span><span class="tech-tag">TF-IDF</span><span class="tech-tag">NetworkX</span><span class="tech-tag">Python</span></div><div class="project-footer"><a href="https://github.com/Akshara-sarode/YouTube-API-Learning-Recommendation-System" target="_blank" rel="noopener noreferrer" class="github-btn"><i class="fab fa-github"></i> View on GitHub</a><div class="project-arrow"><i class="fas fa-arrow-right"></i></div></div></div>
-    </div>
-
-    <div class="project-card reveal reveal-delay-1">
-      <div class="project-img"><img src="assets/images/project_telco_retention.png" alt="Telco customer retention optimizer" loading="lazy" /><div class="project-overlay"></div><div class="project-category">Causal AI · Power BI</div></div>
-      <div class="project-body"><div class="project-title">Telco Customer Retention Optimizer</div><div class="project-desc">Causal-AI retention platform modeling 100K customer records to identify 1.22K incremental retentions and an estimated $1.22M annual revenue recovery opportunity.</div><div class="project-tech"><span class="tech-tag">Uplift Modeling</span><span class="tech-tag">Scikit-learn</span><span class="tech-tag">SQL</span><span class="tech-tag">Power BI</span><span class="tech-tag">Python</span></div><div class="project-footer"><a href="https://github.com/Akshara-sarode/Telco-Customer-Retention-Optimizer-Causal-AI-Uplift-Modeling-Power-BI" target="_blank" rel="noopener noreferrer" class="github-btn"><i class="fab fa-github"></i> View on GitHub</a><div class="project-arrow"><i class="fas fa-arrow-right"></i></div></div></div>
-    </div>
-
-    <div class="project-card reveal reveal-delay-2">
-      <div class="project-img"><img src="assets/images/project_uber_analytics.png" alt="Uber ride booking analytics dashboard" loading="lazy" /><div class="project-overlay"></div><div class="project-category">Power BI · Business Intelligence</div></div>
-      <div class="project-body"><div class="project-title">Uber Ride Booking Analytics</div><div class="project-desc">Power BI dashboard analyzing 150K+ ride bookings with 7 executive KPIs, ₹51.85M revenue, 62% fulfillment, and operational insights across 7 vehicle categories.</div><div class="project-tech"><span class="tech-tag">Power BI</span><span class="tech-tag">Power Query</span><span class="tech-tag">DAX</span><span class="tech-tag">Excel</span><span class="tech-tag">KPI Analysis</span></div><div class="project-footer"><a href="https://github.com/Akshara-sarode/Uber-Ride-Booking-Analytics" target="_blank" rel="noopener noreferrer" class="github-btn"><i class="fab fa-github"></i> View on GitHub</a><div class="project-arrow"><i class="fas fa-arrow-right"></i></div></div></div>
-    </div>
-
-    <div class="project-card reveal">
-      <div class="project-img"><img src="assets/images/project_coffee_sales.jpg" alt="Coffee shop sales analytics dashboard" loading="lazy" /><div class="project-overlay"></div><div class="project-category">Excel · Power BI</div></div>
-      <div class="project-body"><div class="project-title">Coffee Shop Sales Analytics</div><div class="project-desc">Interactive sales dashboard for 149K+ transactions, surfacing $698.8K sales, customer footfall, product mix, store performance, and peak weekly demand.</div><div class="project-tech"><span class="tech-tag">Microsoft Excel</span><span class="tech-tag">Pivot Tables</span><span class="tech-tag">Pivot Charts</span><span class="tech-tag">Power BI</span><span class="tech-tag">KPI Cards</span></div><div class="project-footer"><a href="https://github.com/Akshara-sarode/Coffee-Shop-Sales-Analytics" target="_blank" rel="noopener noreferrer" class="github-btn"><i class="fab fa-github"></i> View on GitHub</a><div class="project-arrow"><i class="fas fa-arrow-right"></i></div></div></div>
-    </div>
 
     <div class="project-card reveal">
       <div class="project-img"><img src="assets/images/InsightBot%20with%20GenAI.jpeg" alt="InsightBot" loading="lazy" /><div class="project-overlay"></div><div class="project-category">AI · RAG · LLMs</div></div>
@@ -1465,94 +1251,30 @@
   <h2 class="section-title reveal"><span class="gradient-text">Certifications</span></h2>
   <p class="section-subtitle reveal">Industry-recognized credentials from leading technology organizations.</p>
   <div class="cert-grid">
-
     <div class="cert-card reveal">
-      <div class="cert-badge google"><img src="https://www.gstatic.com/images/branding/googleg/1x/googleg_standard_color_128dp.png" alt="Google" /></div>
+      <div class="cert-badge">🔵</div>
       <div class="cert-name">Google Data Analytics</div>
       <div class="cert-issuer">Google</div>
       <div class="cert-platform">via Coursera</div>
-      <a href="https://www.coursera.org/account/accomplishments/professional-cert/EOOAXA5DXD31"
-         target="_blank" class="cert-link">View Certificate <i class="fas fa-external-link-alt"></i></a>
     </div>
-
     <div class="cert-card reveal reveal-delay-1">
-      <div class="cert-badge meta"><i class="fab fa-meta"></i></div>
+      <div class="cert-badge">📘</div>
       <div class="cert-name">Introduction to Data Analytics</div>
       <div class="cert-issuer">Meta</div>
       <div class="cert-platform">via Coursera</div>
-      <a href="https://www.coursera.org/account/accomplishments/verify/W1JUQUY1RUVV"
-         target="_blank" class="cert-link">View Certificate <i class="fas fa-external-link-alt"></i></a>
     </div>
-
     <div class="cert-card reveal reveal-delay-2">
-      <div class="cert-badge mckinsey"><img src="assets/images/logo_mckinsey.png" alt="McKinsey" /></div>
-      <div class="cert-name">McKinsey Forward Program</div>
-      <div class="cert-issuer">McKinsey &amp; Company</div>
-      <div class="cert-platform">via McKinsey.org</div>
-      <a href="https://www.credly.com/badges/1b9445d3-fbba-4c9a-a9dc-b895e64bce2e/public_url"
-         target="_blank" class="cert-link">View Badge <i class="fas fa-external-link-alt"></i></a>
-    </div>
-
-    <div class="cert-card reveal reveal-delay-3">
-      <div class="cert-badge google"><img src="https://www.gstatic.com/images/branding/googleg/1x/googleg_standard_color_128dp.png" alt="Google" /></div>
+      <div class="cert-badge">🟢</div>
       <div class="cert-name">Foundations of Business Intelligence</div>
       <div class="cert-issuer">Google</div>
       <div class="cert-platform">via Coursera</div>
     </div>
-
-    <div class="cert-card reveal reveal-delay-1">
-      <div class="cert-badge aws"><i class="fab fa-aws"></i></div>
+    <div class="cert-card reveal reveal-delay-3">
+      <div class="cert-badge">🟠</div>
       <div class="cert-name">AWS Certified Data Analytics</div>
       <div class="cert-issuer">Amazon Web Services</div>
       <div class="cert-platform">via Coursera</div>
     </div>
-
-  </div>
-</section>
-
-<!-- ═══════════════ RESEARCH PUBLICATIONS ═══════════════ -->
-<section id="publications">
-  <div class="section-tag reveal"><i class="fas fa-book-open"></i> Academic Work</div>
-  <h2 class="section-title reveal">Research <span class="gradient-text">Publications</span></h2>
-  <p class="section-subtitle reveal">Peer-reviewed research spanning artificial intelligence, health, and business intelligence.</p>
-  <div class="publications-grid">
-
-    <article class="publication-card reveal">
-      <div class="publication-icon"><i class="fas fa-leaf"></i></div>
-      <h3 class="publication-title">Enhanced Sugarcane Disease Diagnosis Through Transfer Learning &amp; Deep Convolutional Networks</h3>
-      <p class="publication-journal">International Journal of Innovative Science and Research Technology (IJISRT) · Vol. 8, Issue 6 · June 2023</p>
-      <ul class="publication-list">
-        <li>Published peer-reviewed research on AI-driven crop disease detection using transfer learning and deep CNNs.</li>
-        <li>Designed an image-classification pipeline with pre-trained models to improve diagnosis accuracy and support precision agriculture.</li>
-        <li>Applied Python, TensorFlow/Keras, OpenCV, and image preprocessing to develop and evaluate the solution.</li>
-      </ul>
-      <a class="publication-link" href="https://www.ijisrt.com/enhanced-sugarcane-disease-diagnosis-through-transfer-learning-deep-convolutional-networks" target="_blank" rel="noopener noreferrer">Read Publication <i class="fas fa-external-link-alt"></i></a>
-    </article>
-
-    <article class="publication-card reveal reveal-delay-1">
-      <div class="publication-icon"><i class="fas fa-brain"></i></div>
-      <h3 class="publication-title">The Impact of Childhood Trauma on Adult Mental Health</h3>
-      <p class="publication-journal">International Journal of Science and Research (IJSR) · Vol. 12, Issue 6 · June 2023</p>
-      <ul class="publication-list">
-        <li>Published peer-reviewed research on the relationship between adverse childhood experiences and long-term adult mental health outcomes.</li>
-        <li>Synthesized clinical and psychological literature to examine risk factors, behavioral impacts, and intervention strategies.</li>
-        <li>Highlighted the value of early diagnosis, trauma-informed care, and public-health awareness.</li>
-      </ul>
-      <a class="publication-link" href="https://www.ijsr.net/getabstract.php?paperid=SR23621004642" target="_blank" rel="noopener noreferrer">Read Publication <i class="fas fa-external-link-alt"></i></a>
-    </article>
-
-    <article class="publication-card reveal reveal-delay-2">
-      <div class="publication-icon"><i class="fas fa-chart-line"></i></div>
-      <h3 class="publication-title">Business Intelligence (BI) – Overview</h3>
-      <p class="publication-journal">International Journal of Innovative Research in Science, Engineering and Technology (IJIRSET) · Vol. 12, Issue 2 · February 2023</p>
-      <ul class="publication-list">
-        <li>Published peer-reviewed research covering data warehousing, data mining, predictive analytics, and dashboard reporting.</li>
-        <li>Examined how BI transforms organizational data into actionable insights for strategic and operational decisions.</li>
-        <li>Reviewed modern BI architectures and applications for KPI monitoring, reporting, and performance optimization.</li>
-      </ul>
-      <a class="publication-link" href="https://www.ijirset.com/upload/2023/february/23__Akshara_NC.pdf" target="_blank" rel="noopener noreferrer">Read Publication <i class="fas fa-external-link-alt"></i></a>
-    </article>
-
   </div>
 </section>
 
@@ -1633,28 +1355,11 @@
   window.addEventListener('scroll', () => {
     let cur = '';
     sections.forEach(s => { if (window.scrollY >= s.offsetTop - 140) cur = s.id; });
-  navAs.forEach(a => {
+    navAs.forEach(a => {
       a.style.color = '';
       if (a.getAttribute('href') === '#' + cur) a.style.color = 'var(--accent)';
     });
   }, { passive: true });
-
-  // Mobile navigation menu
-  const navbar = document.getElementById('navbar');
-  const navToggle = navbar.querySelector('.nav-toggle');
-  const navToggleIcon = navToggle.querySelector('i');
-  const closeNavMenu = () => {
-    navbar.classList.remove('menu-open');
-    navToggle.setAttribute('aria-expanded', 'false');
-    navToggleIcon.className = 'fas fa-bars';
-  };
-  navToggle.addEventListener('click', () => {
-    const isOpen = navbar.classList.toggle('menu-open');
-    navToggle.setAttribute('aria-expanded', String(isOpen));
-    navToggleIcon.className = isOpen ? 'fas fa-times' : 'fas fa-bars';
-  });
-  navbar.querySelectorAll('.nav-links a').forEach(link => link.addEventListener('click', closeNavMenu));
-  window.addEventListener('resize', () => { if (window.innerWidth > 1024) closeNavMenu(); });
 
   // Project card stagger
   document.querySelectorAll('.projects-grid .project-card').forEach((c, i) => {

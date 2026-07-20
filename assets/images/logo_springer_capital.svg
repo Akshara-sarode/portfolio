@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 463 154" role="img" aria-labelledby="title">
+  <title id="title">Springer Capital</title>
+  <rect width="463" height="154" fill="#fff"/>
+  <g transform="translate(21 40)">
+    <circle cx="31" cy="31" r="18" fill="#b6db49"/>
+    <circle cx="52" cy="10" r="18" fill="#72ae42"/>
+    <circle cx="73" cy="31" r="18" fill="#356d25"/>
+    <circle cx="52" cy="52" r="18" fill="#78a947"/>
+  </g>
+  <text x="94" y="99" fill="#356d25" font-family="Arial, Helvetica, sans-serif" font-size="40" font-weight="400" letter-spacing="1.2">SPRINGER</text>
+  <text x="294" y="99" fill="#b6db49" font-family="Arial, Helvetica, sans-serif" font-size="40" font-weight="300" letter-spacing=".2">CAPITAL</text>
+</svg>

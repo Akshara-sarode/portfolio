@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 742 310" role="img" aria-labelledby="title">
+  <title id="title">CSI SIES Graduate School of Technology</title>
+  <rect width="742" height="310" fill="#000"/>
+  <g transform="translate(18 38)" fill="none" stroke="#fff" stroke-width="9">
+    <circle cx="112" cy="112" r="98"/>
+  </g>
+  <g transform="translate(64 84)" fill="#fff">
+    <path d="M0 48 49 0v48zM0 56h49v48zM57 0h49v48L57 0zM57 56l49 48V56z"/>
+  </g>
+  <text x="300" y="174" fill="#fff" font-family="Arial Black, Impact, sans-serif" font-size="164" font-weight="900" letter-spacing="-10">CSI</text>
+  <path d="M310 222h372l-25 58H278z" fill="#fff"/>
+  <text x="330" y="267" fill="#000" font-family="Impact, Arial Narrow, sans-serif" font-size="44" letter-spacing="-1">SIES GST</text>
+  <path d="M680 222h22l-25 58h-22z" fill="#fff"/>
+  <path d="M712 222h12l-25 58h-12z" fill="#fff"/>
+</svg>

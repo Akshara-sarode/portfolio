@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 132" role="img" aria-labelledby="title">
+  <title id="title">CodSoft — Code. Create. Succeed.</title>
+  <rect width="500" height="132" fill="#fff"/>
+  <g fill="none" stroke-linecap="round" transform="translate(12 16)">
+    <circle cx="48" cy="50" r="14" stroke="#c64b50" stroke-width="6" stroke-dasharray="48 40" transform="rotate(-35 48 50)"/>
+    <circle cx="48" cy="50" r="27" stroke="#2d285d" stroke-width="6" stroke-dasharray="76 94" transform="rotate(10 48 50)"/>
+    <circle cx="48" cy="50" r="39" stroke="#c64b50" stroke-width="6" stroke-dasharray="93 152" transform="rotate(-75 48 50)"/>
+    <circle cx="48" cy="50" r="48" stroke="#2d285d" stroke-width="6" stroke-dasharray="104 198" transform="rotate(26 48 50)"/>
+  </g>
+  <text x="125" y="65" fill="#2d285d" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="400">CodSoft</text>
+  <text x="128" y="105" fill="#c64b50" font-family="Arial, Helvetica, sans-serif" font-size="29" font-weight="300">Code.Create.Succeed</text>
+</svg>

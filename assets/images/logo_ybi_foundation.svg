@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" role="img" aria-labelledby="title">
+  <title id="title">YBI Foundation</title>
+  <rect width="480" height="480" fill="#000"/>
+  <rect x="77" y="74" width="276" height="276" rx="45" fill="#eb6432"/>
+  <g fill="#fff">
+    <path d="M130 118h36l28 44 28-44h36l-47 70v62h-34v-62z"/>
+    <path d="M194 202h60c31 0 55 24 55 55v27c0 31-24 55-55 55h-60c-24 0-43-19-43-43v-51c0-24 19-43 43-43zm5 16c-17 0-31 14-31 31v47c0 14 12 26 26 26h60c22 0 39-17 39-39v-26c0-22-17-39-39-39z"/>
+    <path d="M183 274h4v20h-4zm10-9h4v29h-4zm10 14h4v15h-4zm10-24h4v39h-4zm10 17h4v22h-4zm10-11h4v33h-4zm10 16h4v17h-4zm10-25h4v42h-4zm10 15h4v27h-4z"/>
+    <rect x="224" y="347" width="54" height="10" rx="5"/>
+  </g>
+</svg>
